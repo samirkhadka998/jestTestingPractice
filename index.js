@@ -54,4 +54,16 @@ function findIndex(currentIndex, skip){
     return futureIndex;
 }
 
-module.exports = {capitalizeFirtChar, reverseString, add, subtract, divide, multiply, caesarCipher};
+const analyzeArray = arr => {
+    let obj = {};
+    obj.length = arr.length;
+    arr = arr.sort();
+    obj.min = arr[0];
+    obj.max = arr[arr.length -1];
+    let sum = arr.reduce((a,b)=> a+b);
+    obj.average = sum/arr.length;
+
+    return obj;
+}
+
+module.exports = {capitalizeFirtChar, reverseString, add, subtract, divide, multiply, caesarCipher, analyzeArray};

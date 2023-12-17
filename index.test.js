@@ -1,4 +1,4 @@
-const {capitalizeFirtChar, reverseString, add, subtract, multiply ,divide, caesarCipher} = require('./index');
+const {capitalizeFirtChar, reverseString, add, subtract, multiply ,divide, caesarCipher, analyzeArray} = require('./index');
 
 test('Input is laptop', ()=>{
     expect(capitalizeFirtChar('laptop')).toBe('Laptop');
@@ -23,4 +23,11 @@ test('Substract Num -32 - 20', ()=>{
 
 test('Cipher a word ABCDEFGHIJKLMNOPQRSTUVWXYZ', ()=>{
     expect(caesarCipher('ABCDEFGHIJKLMNOPQRSTUVWXYZ',23)).toBe('XYZABCDEFGHIJKLMNOPQRSTUVW');
+})
+
+
+test('Analyze array [1,8,3,4,2,6]', () => {
+    // expect(analyzeArray([1,8,3,4,2,6])).toBe({length: 6, min: 1, max: 8, average: 4})
+    expect(analyzeArray([1,8,3,4,2,6])).toEqual({length: 6, min: 1, max: 8, average: 4});
+
 })
